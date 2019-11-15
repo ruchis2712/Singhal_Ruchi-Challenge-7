@@ -49,7 +49,6 @@ CREATE TABLE titles (
   PRIMARY KEY (emp_no, title)
 );
 
-
 -- Part 1 Q1: Number of [titles] Retiring &
 -- Only the Most Recent Titles
 SELECT emp_no, first_name, last_name, title, from_date, salary
@@ -60,6 +59,7 @@ FROM (
 	FROM employees e
 	RIGHT JOIN titles t on e.emp_no=t.emp_no
 	RIGHT JOIN salaries s on e.emp_no=s.emp_no
+    WHERE e.birth_date BETWEEN '1952-01-01' AND '1955-12-31'
 ) tmp WHERE rn=1;
 
 -- Part 1 Q2: In descending order (by date), list the frequency count of employee titles (i.e., how many employees share the same title?).
