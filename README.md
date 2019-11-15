@@ -38,6 +38,7 @@ FROM (
 ) tmp WHERE rn=1;
 
 -- Part 1 Q2: In descending order (by date), list the frequency count of employee titles (i.e., how many employees share the same title?).
+
 SELECT p.*, t.title_count 
 	INTO OUTFILE "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\part1_q2.csv"
 	FIELDS TERMINATED BY ','
