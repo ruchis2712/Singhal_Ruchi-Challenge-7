@@ -51,14 +51,23 @@ ON p.title=t.title ORDER BY p.from_date DESC;
 ### OUTPUT: outputs in csv files part1-q1.csv and part1_q2.csv within the repo
   - 90,398 epmloyees are retiring across 7 different titles
   - Largest number of retirees belong to Senior Engineer title
+  
     Titles:Count of retirees
+    
     Senior Engineer : 29,415 
+    
     Senior Staff : 28,255 
+    
     Engineer : 14,221 
+    
     Staff : 12,242 
+    
     Technique Leader : 4,500 
+    
     Assistant Engineer : 1,761 
+    
     Manager : 4 
+    
 
 3.) Who’s Ready for a Mentor?
   - Create a new table that contains the following information: Employee number, First and last name, Title, from_date and to_date
@@ -66,6 +75,7 @@ ON p.title=t.title ORDER BY p.from_date DESC;
 
 #### SQL for Q3
 -- Part 1 Q3: Who’s Ready for a Mentor?
+
 SELECT e.emp_no, e.first_name, e.last_name, t.title, d.from_date, d.to_date
 	INTO OUTFILE "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\part1_q3.csv"
 	FIELDS TERMINATED BY ','
